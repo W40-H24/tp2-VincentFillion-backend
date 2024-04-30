@@ -1,0 +1,59 @@
+### Créer une publication
+### Exemple : l'utilisateur 1 crée une publication
+POST {{baseURL}}/posts
+Authorization: Bearer {{user1_token}}
+content-type: application/json
+
+{
+  "userId": 1,
+  "title": "Une publication de l'utilisateur 1...",
+  "content": "Le contenu de la publication..."
+}
+
+### Créer une publication
+### Exemple : l'utilisateur 2 crée une publication
+POST {{baseURL}}/posts
+Authorization: Bearer {{user2_token}}
+content-type: application/json
+
+{
+  "userId": 2,
+  "title": "Une publication de l'utilisateur 2...",
+  "content": "Le contenu de la publication..."
+}
+
+
+### Voter "pour" une publication
+### Exemple: l'utilisateur 1 vote "pour" la publication #1
+POST {{baseURL}}/posts/1/votes
+Authorization: Bearer {{user1_token}}
+content-type: application/json
+
+{
+  "vote": "up"
+}
+
+### Voter "contre" une publication
+### Exemple: l'utilisateur 2 vote "contre" la publication #1
+POST {{baseURL}}/posts/1/votes
+Authorization: Bearer {{user2_token}}
+content-type: application/json
+
+{
+  "vote": "down"
+}
+
+### Afficher toutes les publications
+GET {{baseURL}}/posts
+
+### Afficher une publication
+GET {{baseURL}}/posts/1
+
+
+### Effacer un vote (utilisateur 1)
+DELETE {{baseURL}}/posts/1/votes
+Authorization: Bearer {{user1_token}}
+
+### Effacer un vote (utilisateur 2)
+DELETE {{baseURL}}/posts/1/votes
+Authorization: Bearer {{user2_token}}

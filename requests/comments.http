@@ -1,0 +1,45 @@
+### Ajouter un commentaire
+### Exemple : l'utilisateur 1 ajoute un commentaire sur la publication dont le id est 2
+POST {{baseURL}}/posts/2/comments
+Authorization: Bearer {{user1_token}}
+content-type: application/json
+
+{
+  "comment": "Un commentaire de l'utilisateur 1 sur la publication dont le id est 2"
+}
+
+### Ajouter un commentaire
+### Exemple : l'utilisateur 2 ajoute un commentaire sur la publication dont le id est 1
+POST {{baseURL}}/posts/1/comments
+Authorization: Bearer {{user2_token}}
+content-type: application/json
+
+{
+  "comment": "Un commentaire de l'utilisateur 2 sur la publication dont le id est 1"
+}
+
+### Voter pour un commentaire
+### Exemple : l'utilisateur 1 vote "pour" le commentaire dont le id est 1 associé à la publication dont le id est 1
+POST {{baseURL}}/posts/1/comments/1/votes
+Authorization: Bearer {{user1_token}}
+content-type: application/json
+
+{
+  "vote": "up"
+}
+
+### Voter "contre" un commentaire
+### Exemple : l'utilisateur 2 vote "contre" le commentaire dont le id est 2 associé à la publication dont le id est 1
+POST {{baseURL}}/posts/1/comments/2/votes
+Authorization: Bearer {{user2_token}}
+content-type: application/json
+
+{
+  "vote": "down"
+}
+
+### Effacer un vote associé à un commentaire
+### Exemple : l'utilisateur 1 efface son vote associé au commentaire dont le id est 1 associé à la publication dont le id est 1
+DELETE {{baseURL}}/posts/1/comments/1/votes
+Authorization: Bearer {{user1_token}}
+

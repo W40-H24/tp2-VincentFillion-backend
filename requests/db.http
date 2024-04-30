@@ -1,0 +1,8 @@
+### Requêtes utilitaires pour peupler et effacer la base de données
+### Ces requêtes ne devraient pas être utilisées dans l'application Vue.js
+
+### Peupler la base de données avec des données de test
+POST {{baseURL}}/seedDB
+
+### Effacer le contenu de la base de données
+POST {{baseURL}}/clearDB

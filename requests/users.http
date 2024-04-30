@@ -1,0 +1,15 @@
+### Récupérer les informations d'un utilisateur (utilisateur 1)
+GET {{baseURL}}/users/1
+Authorization: Bearer {{user1_token}}
+
+### Récupérer les informations (utilisateur 2)
+GET {{baseURL}}/users/2
+Authorization: Bearer {{user2_token}}
+
+### Accéder aux votes (utilisateur 1)
+GET {{baseURL}}/users/1/votes
+Authorization: Bearer {{user1_token}}
+
+### Accéder aux votes (utilisateur 2)
+GET {{baseURL}}/users/2/votes
+Authorization: Bearer {{user2_token}}

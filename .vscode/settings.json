@@ -1,0 +1,22 @@
+{
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "baseURL": "http://localhost:3000",
+      "user1_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQHRlc3QuY29tIiwiaWF0IjoxNzEyMjQwNzc5LCJleHAiOjE3MTIyNDQzNzksInN1YiI6IjEifQ.fQK9l6YACBMikSajliztMix0oBCafC5ZeTAWGyraPfA",
+      "user2_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIyQHRlc3QuY29tIiwiaWF0IjoxNzEyMjQwNzk0LCJleHAiOjE3MTIyNDQzOTQsInN1YiI6IjIifQ.TjrseFa92UDZ2yzEq1A8AJJ1pwCPPmUa_lwu7jCkVaM"
+    }
+  },
+  "vitest.enable": true,
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "numso.prettier-standard-vscode"
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  "testing.automaticallyOpenPeekView": "never",
+}
